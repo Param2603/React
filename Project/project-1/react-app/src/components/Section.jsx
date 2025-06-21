@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section = () => {
   return (
-     <section className='bg-amber-100 p-5 mt-2 border-2  flex'>
+     <section className='bg-amber-100 p-5 border-2  flex'>
         <div className='max-w-xl'>
           <p className='text-5xl font-bold leading-tight mb-10'> Discover the World's Most Beautiful Places</p>
           <p className='text-xl mb-10 text-gray-500'>Explore destinations, experience unique cultures and create memories that last a lifetime.</p>
