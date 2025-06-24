@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-function App() {
-  let [count, setCount] = useState(JSON.parse(localStorage.getItem("local")) || 0);
+const App = () => {
+  const [count, setCount] = useState(JSON.parse(localStorage.getItem("local")) || 0);
 
   useEffect(() => {
     localStorage.setItem("local", JSON.stringify(count))
@@ -25,5 +25,4 @@ function App() {
     </div>
   )
 }
-
 export default App
