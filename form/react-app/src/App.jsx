@@ -5,7 +5,8 @@ const App = () => {
 
   function handleSubmit (e){
     e.preventDefault()
-    console.log(data)
+    
+    
   }
 
   return (
@@ -24,6 +25,11 @@ const App = () => {
         <label htmlFor="">Password:</label>
         <input onChange={(e)=>setData({... data,password:e.target.value
         })} value={data.password} type="number" />
+      </div>
+      <div>
+        <label htmlFor="">Confirm Password:</label>
+        <input onChange={(e)=>setData({... data,confirmpassword:e.target.value
+        })} value={data.confirmpassword} type="number" />
       </div>
       <button>Submit</button>
     </form>
