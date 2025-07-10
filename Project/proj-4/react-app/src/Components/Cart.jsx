@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router'
 
 const Cart = () => {
   const [data, setData] = useState({name:"",title:"",category:""})
@@ -9,11 +10,19 @@ const Cart = () => {
     setData(res.data)
   }
 
+    async function getData(){
+    let res = await axios.get("http://localhost:3000/Products")
+    setData(res.data)
+  }
 
   function handleSubmit (){
     e.preventDefault()
     console.log(data)
   }
+
+  useEffect(() => {
+    getData()
+  },[])
   return (
     <div>   
       <form onSubmit={handleSubmit} action="">
@@ -22,14 +31,19 @@ const Cart = () => {
       <input value={data.category} onChange={(e) => setData({...data, category: e.target.value})} type="text" placeholder='Category' />
 
       <div>
-        <button >Add Cart</button>
+          <button>Add Cart</button> 
       </div>
 
-      <div>
 
-      </div>
-        </form> 
+ {setData && <div>
+          <p>{setData.name}</p>
+          <p>{setData.title}</p>
+          <p>{setData.category}</p>
+          </div>}
       
+        </form> 
+
+       
     </div>
 
   
