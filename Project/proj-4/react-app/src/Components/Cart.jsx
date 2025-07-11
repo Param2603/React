@@ -13,11 +13,16 @@ const Cart = () => {
     console.log([res.data])
   }
 
-    async function getData(){
-    let res = await axios.get("http://localhost:3000/Products")
-    setData(res.data)
+
+  async function handleDelete(){
+    await axios.delete("http://localhost:3000/Products", )
+    getData()
   }
 
+    async function getData(id){
+    let res = await axios.get("http://localhost:3000/Products",+id)
+    setData(res.data)
+  }
 
   useEffect(() => {
     getData()
@@ -33,8 +38,6 @@ const Cart = () => {
           <button>Add Cart</button> 
       </div>
 
-
-        
         </form> 
 
         {data && data.map((item)=>{
@@ -42,13 +45,15 @@ const Cart = () => {
                 <div key={item.id}>
                   <p>title :- {item.title}</p>
                   <p>Name :- {item.name}</p>
-                </div>
+
+                  <button onClick={() => {handleDelete(item.id)}}>Delete</button>
+                  <button>Edit</button>
+
+                  {/* <button onClick={() => {handleDelete()}}>Delete</button> */}
+                </div>             
               )
         })
-
-        }
-
-       
+        }       
     </div>
 
   
