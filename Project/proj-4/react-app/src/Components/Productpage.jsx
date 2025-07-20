@@ -1,38 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import axios from 'axios'
 
-const Productpage = () => {
-    const [data, setData] = useState({name:"",title:"",category:""})
+const ProductPage = () => {
+  const { id } = useParams()
+  const [product, setProduct] = useState(null)
 
+  useEffect(() => {
+    async function fetchData() {
+      const res = await axios.get(`http://localhost:3000/Products/${id}`)
+      setProduct(res.data)
+    }
+    fetchData()
+  }, [id])
 
-      function handleSubmit (){
-    e.preventDefault()
-    console.log(data)
-  }
+  if (!product) return <p>Loading...</p>
 
-   
   return (
-     <div>   
-      <form onSubmit={handleSubmit} action="">
-        <input value={data.name} onChange={(e) => setData({...data, name: e.target.value})} type="text" placeholder='Name' /> 
-      <input value={data.title} onChange={(e) => setData({...data, title: e.target.value})} type="text" placeholder='Title' /> 
-      <input value={data.category} onChange={(e) => setData({...data, category: e.target.value})} type="text" placeholder='Category' />
-{/* 
-      <div>
-        <Link to={"/productpage"}>
-          <button>Add Cart</button>
-        </Link>
+    <div className="max-w-md flex flex-col justify-center  mx-auto p-6 bg-white rounded-[10px] mt-10">
+      <h2 className="text-[30px] text-black font-bold mb-4 text-center">Single Product Page</h2>
 
-      </div> */}
-        </form> 
+      <div className="space-y-2">
+        <p className="text-gray-700"><span className="font-semibold">ID:</span> {product.id}</p>
+        <p className="text-gray-700"><span className="font-semibold">Name:</span> {product.name}</p>
+        <p className="text-gray-700"><span className="font-semibold">Price:</span> ₹{product.price}</p>
+      </div>
 
-        {setData && <div>
-          <p>{setData.name}</p>
-          <p>{setData.title}</p>
-          <p>{setData.category}</p>
-          </div>}    
+      <div className="mt-6 text-center">
+        <Link
+          to="/"
+          className=" bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-[5px]"
+        >Back to Cart Page
+       </Link>
+      </div>
     </div>
-
   )
 }
 
-export default Productpage
+export default ProductPage
