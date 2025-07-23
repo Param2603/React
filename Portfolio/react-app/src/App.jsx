@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import { Route, Routes } from 'react-router'
+import Education from './components/Education'
+import Portfolio from './components/Portfolio'
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Hero/>
       <About/>
       <Skills/>
+      <Education/>
+      <Portfolio/>
       {/* <Routes>
       <Route path='/' element={<Hero/>}/>
       </Routes> */}

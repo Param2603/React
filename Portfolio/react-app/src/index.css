@@ -164,3 +164,88 @@
     color: var(--white);
     font-size: 1rem;
 }
+
+/* Education-Section */
+.edu-work{
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var(--secondary-color);
+}
+
+.label{
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+.edu-work h2{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+.edu-work-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.box{
+    background: var(--lightblue);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    flex: 1 1 400px;
+    max-width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box-header{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    gap: 0.75rem;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+}
+.EducationCard{
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+    text-align: left;
+    color: var(--white);
+    margin: 20px;
+    box-sizing: border-box;
+}
+.EducationCard:hover{
+    transform: translateY(-5px);
+    border-bottom: 5px solid var(--primary-color);
+}
+.EducationCard h4{
+    color: var(--primary-color);
+}
+.EducationCard p{
+    color: var(--light);
+    margin-bottom: 30px;
+}
+.icon{
+    font-size: 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.date-label{
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+.sub-heading{
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Portfolio-Section */
