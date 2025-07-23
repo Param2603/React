@@ -3,9 +3,9 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
-import { Route, Routes } from 'react-router'
 import Education from './components/Education'
 import Portfolio from './components/Portfolio'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
       <Skills/>
       <Education/>
       <Portfolio/>
+      <Footer/>
       {/* <Routes>
       <Route path='/' element={<Hero/>}/>
       </Routes> */}

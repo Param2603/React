@@ -170,6 +170,7 @@
     padding: 3rem 1rem;
     text-align: center;
     background: var(--secondary-color);
+    background: url("./Images/heroimg.png") var(--secondary-color)
 }
 
 .label{
