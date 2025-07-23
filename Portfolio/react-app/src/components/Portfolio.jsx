@@ -13,7 +13,9 @@ const Portfolio = () => {
         </div>
 
         <div className='portfolio-grid'>
-            {}
+            {PortfolioItems.map((item,i) => (<div className='portfolio-card' key={i}>
+                
+            </div>))}
         </div>
     </div>
     </>
