@@ -8,7 +8,7 @@
     --light-text:#2f2f3b;
     --light:#cccccc;
 }
-
+/* Navbar */
 .navbar{
     display: flex;
     align-items: center;
@@ -55,4 +55,112 @@
     display: none;
     background: none;
     border: none;
+}
+
+/* Hero-Section */
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10rem 0 10rem;
+    background: url("./Images/heroimg.png") var(--secondary-color);
+    background-size: 100%;
+    gap: 2rem;
+}
+
+.intro{
+    font-weight: 600;
+    color: var(--white);
+}
+.main-heading{
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: bold;
+}
+.highlight{
+    color: var(--primary-color);
+    font-size: 32px;
+
+}
+.description{
+    color: var(--white);
+    margin-top: 0.5rem;
+}
+
+.button{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.portfolio-b{
+    background: var(--white);
+    color: var(--primary-color);
+    font-weight: 500;
+    border: none;
+}
+.portfolio-b:hover{
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.hero-image img{
+    width: 800px;
+    height: auto;
+}
+
+/* About-Section */
+.about-section{
+    background: var(--secondary-color);
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text{
+    width: 500px;
+}
+.about-text h2{
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.about-text h2 span{
+    color: var(--white);
+}
+.about-text p{
+    max-width: 700px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-stats{
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stat-box{
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 2rem ;
+    border-radius: 1rem;
+    text-align: center;
+    min-width: 150px;
+}
+.stat-box h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.stat-box p{
+    margin-top: 0.5rem;
+    color: var(--white);
+    font-size: 1rem;
 }

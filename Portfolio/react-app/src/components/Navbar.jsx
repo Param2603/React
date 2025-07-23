@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,7 +16,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <li className="text-[#fff] hover:text-[#697af7] cursor-pointer">Home</li>
+          <Link to={"/"}><li className='text-[#697af7] cursor-pointer'>Home</li></Link>
           <li className="text-[#fff] hover:text-[#697af7] cursor-pointer">Portfolio</li>
           <li className="text-[#fff] hover:text-[#697af7] cursor-pointer">Testimonials</li>
           <li className="text-[#fff] hover:text-[#697af7]  cursor-pointer">About</li>
