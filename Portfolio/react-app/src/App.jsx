@@ -5,7 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Education from './components/Education'
 import Portfolio from './components/Portfolio'
-import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Skills/>
       <Education/>
       <Portfolio/>
-      <Footer/>
+      <Contact/>
       {/* <Routes>
       <Route path='/' element={<Hero/>}/>
       </Routes> */}
