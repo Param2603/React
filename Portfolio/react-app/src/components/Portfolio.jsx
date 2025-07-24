@@ -5,17 +5,17 @@ const Portfolio = () => {
     {
       title: "Counter Application (React)",
       img: "./Images/project-1.png",
-      url: "https://vercel.com/params-projects-27db3b3d/react-llsg"
+      url: "https://react-llsg.vercel.app/"
     },
     {
       title: "Registration Form (React)",
       img: "./Images/project-2.png",
-      url: "https://vercel.com/params-projects-27db3b3d/react-proj3"
+      url: "https://react-proj3.vercel.app/"
     },
     {
-      title: "Add To Cart",
-      img: "./Imageas",
-      url: ""
+      title: "Add To Cart (React)",
+      img: "./Images/project-3.png",
+      url: "https://react-proj-4-dqlf-dpx14my3y-params-projects-27db3b3d.vercel.app/"
     }
   ]
 

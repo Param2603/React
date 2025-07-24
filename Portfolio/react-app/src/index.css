@@ -346,6 +346,7 @@
 .section-subtitle{
     color: var(--primary-color);
 }
+
 .portfolio-header{
     display: flex;
     justify-content: space-between;
@@ -381,6 +382,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--white);
+    margin-bottom: 20px;
 }
 
 /* Contact-Section */
@@ -437,7 +439,7 @@
     color: var(--light);
 }
 
-/* .contact-form-box{
+.contact-form-box{
     flex: 1;
     position: relative;
     background: var(--lightblue);
@@ -445,7 +447,7 @@
     border-radius: 10px;
     z-index: 1;
     width: 600px;
-} */
+}
 .form-heading{
     font-size: 2rem;
     color: var(--white);
@@ -481,7 +483,8 @@
     z-index: -1;
     background: var(--primary-color);
 }
-.footer{
+
+/* .footer{
     border-top: 1px solid var(--light-text);
     font-size: 1rem;
 }
@@ -506,4 +509,4 @@
 }
 .footer-bottom span{
     color: var(--primary-color);
-}
+} */

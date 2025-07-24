@@ -52,8 +52,7 @@ const Contact = () => {
         </div>
         
 
-
-    <footer className='footer'>
+    {/* <footer className='footer'>
         <div className='footer-top'>
             <div className='logo'>
                 <img src="" alt="" />
@@ -72,7 +71,7 @@ const Contact = () => {
         <div className='footer-bottom'>
             &copy; 2025 <span>My Portfolio</span> by. All Rights Reserved
         </div>
-    </footer>
+    </footer> */}
     
     </div>
 
