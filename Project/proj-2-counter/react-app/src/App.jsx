@@ -8,8 +8,8 @@ const App = () => {
   }, [count])
 
   return (
-    <div className='flex justify-center bg-gray-100 px-4 h-60'>
-      <div className='bg-white shadow-lg rounded-[15px] p-8 w-full text-center'>
+    <div className='flex  w-100% h-[100vh]  items-center justify-center bg-gray-100 px-4 '>
+      <div className='bg-white shadow-lg rounded-[15px] p-8 w-auto text-center'>
 
         <p className='font-bold text-[30px] text-blue-400 mb-6'>Counter Application</p>
         <p className='text-[20px] text-black font-semibold mb-4'>Count: <span className='text-gray-600'>{count}</span></p>
