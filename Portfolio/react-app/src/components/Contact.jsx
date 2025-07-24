@@ -12,18 +12,16 @@ const Contact = () => {
                 <h2 className='title'>Full Stack Development</h2>
 
 
-                <div className='social-icons'>
-                    <FaLinkedin/>
-                    <FaSquareFacebook/>
-                    <FaSquareTwitter/>
-                    <FaSquareInstagram/>
+                <div className='icons'>
+                    <span className='social-icons'><FaLinkedin/></span>
+                    <span className='social-icons'><FaSquareFacebook/></span>
+                    <span className='social-icons'><FaSquareTwitter/></span>
+                    <span className='social-icons'><FaSquareInstagram/></span>
+                                  
                 </div>
 
                 <p className='label'>My Personal Contact</p>
                 <p className='contact'>977-343-0102</p>
-
-                <p></p>
-                <p></p>
             </div>
 
             <div className='contact-form-box'>
