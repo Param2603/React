@@ -1,8 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <Link>
+      
+      </Link>
+
+    </div>
   )
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaSearch } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -9,12 +10,15 @@ const Navbar = () => {
         </div>
         <div>
             <ul>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
+                <li>HOME</li>
+                <li>COLLECTION</li>
+                <li>TESTIMONIAL</li>
+                <li>CONTACT</li>
             </ul>
         </div>
+
+
+        <span><FaSearch /></span>
 
         <button>Get Started</button>
     </nav>
