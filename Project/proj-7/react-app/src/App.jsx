@@ -42,7 +42,7 @@ const App = () => {
                 <td className="px-4 py-2 uppercase">{item.symbol}</td>
                 <td className="px-4 py-2">{item.name}</td>
                 <td className="px-4 py-2">
-                  <img src={item.image} alt={item.name} className="w-6 h-6 mx-auto" />
+                  <img src={item.image} alt={item.name} className="w-10 h-10 mx-auto" />
                 </td>
                 <td className="px-4 py-2">{item.current_price}</td>
                 <td className="px-4 py-2">{item.market_cap}</td>
