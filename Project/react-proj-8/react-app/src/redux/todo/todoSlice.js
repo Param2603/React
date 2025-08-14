@@ -46,16 +46,12 @@ const todoSlice = createSlice({
             saveDataToLocalStorage(state.todo)
         },
 
-        filterTask: (state,action) => {
-            state.filter.status = action.payload
-        },
-
         searchTask: (state,action) => {
             state.filter.search = action.payload
         }
     }
 })
 
-export const { addTask,deleteTask,editTask,filterTask,searchTask,toggleComplete } = todoSlice.actions
+export const { addTask,deleteTask,editTask,searchTask,toggleComplete } = todoSlice.actions
 
 export default todoSlice.reducer

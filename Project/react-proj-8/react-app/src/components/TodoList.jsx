@@ -11,8 +11,6 @@ const TodoList = () => {
     const [editText,setEditText] = useState("")
     const [editId,setEditId] = useState(null)
 
-    
-
 
     function handleSubmit(e){
         e.preventDefault();
@@ -41,6 +39,12 @@ const TodoList = () => {
         }
     }
 
+    const todoData = todo.filter(data => {
+        if(filter.status === 'completed') return data.completed;
+        if(filter.status === 'pending') return !data.completed;
+        return true;
+    }).filter(data => data.text.toLowerCase().includes(filter.search.toLowerCase()))
+
   return (
     <div className='max-w-xl mx-auto p-4'>
         <p className='text-[25px] font-bold mb-4 pt-15'>Todo List</p>
@@ -53,7 +57,7 @@ const TodoList = () => {
             placeholder='Enter New Task'  
             className='p-2 border rounded-[5px] flex-1' />
 
-            <button type='submit'       className='bg-blue-500 text-white px-6 py-2 rounded-[5px] hover:bg-blue-600 cursor-pointer'>Add Task</button>
+            <button type='submit' className='bg-blue-500 text-white px-6 py-2 rounded-[5px] hover:bg-blue-600 cursor-pointer'>Add Task</button>
         </form>
 
         <div>
@@ -65,8 +69,8 @@ const TodoList = () => {
 
         <div>
             <ul className='space-y-2'>
-                {todo.length === 0 && <p>No Tasks Found</p>}
-                {todo.map(data => (<li key={data.id} className='flex items-center justify-between p-3 border rounded'>
+                {todoData.length === 0 && <p>No Tasks Found</p>}
+                {todoData.map(data => (<li key={data.id} className='flex items-center justify-between p-3 border rounded'>
                     <div className='flex items-center gap-2 '>
                         <input type="checkbox" checked={data.completed} onChange={(e) => dispatch(toggleComplete(data.id))} 
                         className='border rounded px-2'/>
